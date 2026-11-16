@@ -31,7 +31,7 @@ final readonly class InsuranceCalculationResponse
         int $tripDays,
         float $dailyCoefficient,
         float $currencyRate,
-        int $insuranceSum
+        int $insuranceSum,
     ): self {
         return new self(
             totalCostInCurrency: round($totalCostInCurrency, 2, PHP_ROUND_HALF_UP),

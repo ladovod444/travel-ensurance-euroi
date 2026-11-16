@@ -82,7 +82,7 @@ final readonly class InsuranceCalculationRequest
             return false;
         }
 
-        // Дополнительно проверяем, что дата реально существует (например, 2025-02-30 невалидна)
+        // Дополнительно проверяем, что дата реально существует (например, 2026-02-30 невалидна)
         $d = \DateTimeImmutable::createFromFormat('Y-m-d', $date);
 
         return $d && $d->format('Y-m-d') === $date;
