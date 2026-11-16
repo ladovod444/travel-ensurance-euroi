@@ -19,7 +19,7 @@ final class InsuranceCalculationController extends AbstractController
 {
     #[Route('/api/insurance/calculate', methods: ['POST'])]
     public function __invoke(
-        #[MapRequestPayload(validationFailedStatusCode: Response::HTTP_BAD_REQUEST)]
+        #[MapRequestPayload]
         InsuranceCalculationRequest $request,
         InsurancePremiumCalculator $calculator,
     ): JsonResponse {
